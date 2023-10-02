@@ -17,5 +17,8 @@ This is a traditional board game in China. The rule is very simple: make a row w
 # g3_puzzle15
 A very simple game: using up/down/left/right key to bring the pieces to the right order (there are chances, that the last two pieces are switched)
 
-# g4_spiral
+# g4_huarong
+A similar game like g3 but size of the pieces are different, which makes it much harder. The goal is to move the big red piece to the bottom.
+
+# g6_spiral
 Inspired by a drawing game. Put a smaller circle in a bigger circle. Both circles are with teeth. There is a hole in the smaller circle, usually not in the center. Put a pen in the hole and draw, so that the smaller circle start rolling around in the big one.
