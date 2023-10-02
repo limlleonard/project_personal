@@ -1,12 +1,12 @@
-# construction
-This app shows how to construct a ellipse, a hyperbola or a parabel with a ruler and a compass.
-(Requirement: pygame)
-
-# trigonometry90
+# schule1_trigonometry90
 This app can generate a question about trigonometry with a 90° angle. Afterwards, it shows the answer step by step. Alternatively, you can also ask a question by inputting 2 values and see the answer.
 
-# trigonometry
+# schule2_trigonometry
 This app can generate a question about trigonometry. Afterwards, it shows the answer step by step. Alternatively, you can also ask a question by inputting 3 values and see the answer.
+
+# schule3_construction
+This app shows how to construct a ellipse, a hyperbola or a parabel with a ruler and a compass.
+(Requirement: pygame)
 
 # g1_four
 This is a traditional board game. Keep putting pieces into the slot to make a row of five pieces next to each other, horizontal, vertial or diagnol
