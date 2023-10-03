@@ -1,6 +1,7 @@
 import pygame as pg
 from math import *
 import colorsys
+
 class spiral:
   def __init__(self, teeth2, r_draw):
     self.breite=self.hohe = 600
@@ -71,42 +72,3 @@ class spiral:
     pg.draw.circle(self.screen2, self.angle_color(self.a1), self.c3, self.r4) #drawing point
     for pt,cl in zip(self.drawn, self.drawn_color): # track
       pg.draw.circle(self.screen2, cl, pt, self.r4/5)
-
-def get_input():
-  while True:
-    ip1=input('Give the number of the teeth (20-80): ')
-    try:
-      n_teeth=int(ip1)
-      if n_teeth>19 and n_teeth<81: break
-    except: pass
-  while True:
-    ip2=input(f'Give the relative radius of the drawing point (1-{n_teeth//6}): ')
-    try:
-      r3=int(ip2)
-      if r3>0 and r3<=n_teeth: break
-    except: pass
-  return n_teeth, r3
-n_teeth, r3=get_input()
-
-s1=spiral(n_teeth, r3)
-pg.init()
-weitermachen = True
-moving=False
-while weitermachen:
-  s1.clock.tick(60)
-  for event in pg.event.get():
-    if event.type == pg.QUIT or event.type == pg.KEYDOWN:
-      if event.key == pg.K_ESCAPE:
-        weitermachen = False
-      if event.key==pg.K_SPACE:
-        moving=not moving
-  s1.screen1.blit(s1.screen2, (0, 0))
-  s1.draw()
-  if moving:
-    full1=s1.move()
-    # print(s1.n_round2, s1.a2)
-    if full1:
-      moving=False
-  pg.display.flip()
-
-pg.quit()
