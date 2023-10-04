@@ -53,7 +53,7 @@ class spiral:
   def pos(self):
     self.c2=(self.c1[0]+(self.r1-self.r2)*cos(self.a1), self.c1[1]-(self.r1-self.r2)*sin(self.a1))
     self.c3=(self.c2[0]+self.r3*cos(self.a2), self.c2[1]-self.r3*sin(self.a2)) # position of the drawing point
-  def draw(self):
+  def draw(self, hint=False):
     str1=f'N1={self.nr_teeth1}, N2={round(self.nr_teeth2)}, N3={self.r_draw}' # text
     font1 = pg.font.SysFont('freesanbold.ttf', 30)
     text1 = font1.render(str1, True, (0, 255, 0))
@@ -72,3 +72,10 @@ class spiral:
     pg.draw.circle(self.screen2, self.angle_color(self.a1), self.c3, self.r4) #drawing point
     for pt,cl in zip(self.drawn, self.drawn_color): # track
       pg.draw.circle(self.screen2, cl, pt, self.r4/5)
+
+    str2='Push button space to start or stop'
+    if hint:
+      text2=font1.render(str2, True, (0,255,0))
+      textRect2=text2.get_rect()
+      textRect2.center=(self.breite//2, self.hohe//2)
+      self.screen2.blit(text2,textRect2) 
